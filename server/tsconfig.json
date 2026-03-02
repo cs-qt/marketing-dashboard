@@ -3,11 +3,12 @@
   "compilerOptions": {
     "outDir": "./dist",
     "rootDir": "./src",
+    "moduleResolution": "node",
     "baseUrl": ".",
     "paths": {
-      "@shared/*": ["../shared/src/*"]
+      "@expertmri/shared": ["../shared/dist/index"],
+      "@expertmri/shared/*": ["../shared/dist/*"]
     }
   },
-  "include": ["src/**/*"],
-  "references": [{ "path": "../shared" }]
+  "include": ["src/**/*"]
 }

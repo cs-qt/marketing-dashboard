@@ -34,14 +34,24 @@ RUN apk add --no-cache dumb-init
 
 WORKDIR /app
 
-# Copy package files
-COPY package.json package-lock.json ./
-COPY shared/package.json shared/
-COPY server/package.json server/
+# # Copy package files
+# COPY package.json package-lock.json ./
+# COPY shared/package.json shared/
+# COPY server/package.json server/
 
-# Install production dependencies only
-RUN npm ci --omit=dev --workspace=server --workspace=shared 2>/dev/null || \
-    npm ci --production --workspace=server --workspace=shared
+# # Install production dependencies only
+# RUN npm ci --omit=dev --workspace=server --workspace=shared 2>/dev/null || \
+#     npm ci --production --workspace=server --workspace=shared
+
+# Copy root workspace files
+COPY package.json package-lock.json tsconfig.base.json ./
+
+# Copy full package.json files for workspaces
+COPY shared/package.json shared/package.json
+COPY server/package.json server/package.json
+
+# Install workspace production deps properly
+RUN npm ci --omit=dev
 
 # Copy built artifacts
 COPY --from=builder /app/shared/dist shared/dist

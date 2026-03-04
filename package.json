@@ -2,6 +2,7 @@
   "name": "expertmri",
   "version": "1.0.0",
   "private": true,
+  "type": "commonjs",
   "workspaces": [
     "shared",
     "server",

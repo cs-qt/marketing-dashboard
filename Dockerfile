@@ -64,6 +64,10 @@ COPY --from=builder /app/shared/package.json shared/package.json
 # Create non-root user
 RUN addgroup -g 1001 -S appgroup && \
     adduser -S appuser -u 1001 -G appgroup
+
+# Create logs directory
+RUN mkdir -p /app/logs && chown -R appuser:appgroup /app/logs
+
 USER appuser
 
 # Environment

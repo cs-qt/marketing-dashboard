@@ -1,4 +1,4 @@
-import { UserRole, AuthMethod, PostStatus, Platform, PostType, ProjectCategory, CommentEntity, NotificationType } from './enums';
+import { UserRole, AuthMethod, PostStatus, Platform, PostType, ProjectCategory, CommentEntity, NotificationType } from './enums.js';
 
 /* ══════════════════════════════════════════════
    USER

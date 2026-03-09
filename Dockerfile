@@ -44,7 +44,7 @@ COPY shared/package.json shared/package.json
 COPY server/package.json server/package.json
 
 # Install production dependencies only
-RUN npm ci --omit=dev
+RUN npm ci --omit=dev --workspace=server --workspace=shared
 
 # Copy built artifacts from builder
 COPY --from=builder /app/shared/dist shared/dist

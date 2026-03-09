@@ -66,7 +66,7 @@ RUN addgroup -g 1001 -S appgroup && \
     adduser -S appuser -u 1001 -G appgroup
 
 # Create logs directory
-RUN mkdir -p /app/logs && chown -R appuser:appgroup /app/logs
+RUN mkdir -p /app/server/logs && chown -R appuser:appgroup /app/server/logs
 
 USER appuser
 

@@ -1,5 +1,5 @@
 {
-  "name": "@expertmri/server",
+  "name": "server",
   "version": "1.0.0",
   "type": "commonjs",
   "main": "dist/index.js",

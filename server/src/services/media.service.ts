@@ -90,7 +90,7 @@ export async function uploadMedia(
   if (!month) throw Object.assign(new Error('Month not found'), { status: 404 });
 
   const s3Key = file.key || `months/${monthId}/media/${Date.now()}_${file.originalname}`;
-  const url = file.location || s3Service.getSignedUrl(s3Key);
+  const url = file.location || (await s3Service.getSignedUrl(s3Key));
 
   // Create version
   const version = await MediaVersion.create({
@@ -148,7 +148,7 @@ export async function uploadNewVersion(
   const nextVersionNum = (lastVersion?.versionNumber || 0) + 1;
 
   const s3Key = file.key || `months/${media.monthId}/media/${mediaId}/v${nextVersionNum}_${file.originalname}`;
-  const url = file.location || s3Service.getSignedUrl(s3Key);
+  const url = file.location || (await s3Service.getSignedUrl(s3Key));
 
   // Deactivate all previous versions
   await MediaVersion.updateMany({ mediaId: media._id }, { isActive: false });
@@ -211,7 +211,7 @@ export async function getDownloadUrl(versionId: string) {
   const version = await MediaVersion.findById(versionId).lean();
   if (!version) throw Object.assign(new Error('Version not found'), { status: 404 });
 
-  const url = s3Service.getSignedUrl(version.s3Key);
+  const url = await s3Service.getSignedUrl(version.s3Key);
   return { url, fileName: version.s3Key.split('/').pop(), fileType: version.fileType, fileSize: version.fileSize };
 }
 

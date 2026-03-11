@@ -1,6 +1,6 @@
 import { Request, Response, NextFunction } from 'express';
 import { UserRole } from '@expertmri/shared';
-import { sendError } from '../utils/apiResponse';
+import { sendError } from '../utils/apiResponse.js';
 
 /**
  * Factory that returns middleware restricting access to specified roles.

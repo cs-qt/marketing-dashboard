@@ -4,13 +4,13 @@ import {
   updateUserRole,
   updateUserStatus,
   inviteReviewer,
-} from '../controllers/users.controller';
-import { authenticate } from '../middleware/authenticate';
-import { authorize } from '../middleware/authorize';
-import { validate } from '../middleware/validate';
+} from '../controllers/users.controller.js';
+import { authenticate } from '../middleware/authenticate.js';
+import { authorize } from '../middleware/authorize.js';
+import { validate } from '../middleware/validate.js';
 import { UserRole } from '@expertmri/shared';
-import { updateRoleSchema, updateStatusSchema, inviteReviewerSchema } from '../validators/auth.validator';
-import { asyncHandler } from '../utils/asyncHandler';
+import { updateRoleSchema, updateStatusSchema, inviteReviewerSchema } from '../validators/auth.validator.js';
+import { asyncHandler } from '../utils/asyncHandler.js';
 
 const router = Router();
 

@@ -1,6 +1,6 @@
 import { Request, Response } from 'express';
-import * as mediaService from '../services/media.service';
-import { sendSuccess, sendError } from '../utils/apiResponse';
+import * as mediaService from '../services/media.service.js';
+import { sendSuccess, sendError } from '../utils/apiResponse.js';
 
 export async function listMonths(req: Request, res: Response): Promise<void> {
   const year = req.query.year ? parseInt(req.query.year as string, 10) : undefined;

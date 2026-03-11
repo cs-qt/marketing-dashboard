@@ -16,7 +16,7 @@ config();
 import mongoose from 'mongoose';
 import https from 'https';
 import http from 'http';
-import { GoogleAdsData, SeoData, SocialMediaData } from '../models';
+import { GoogleAdsData, SeoData, SocialMediaData } from '../models/index.js';
 
 const MONGODB_URI = process.env.MONGODB_URI!;
 

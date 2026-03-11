@@ -1,6 +1,6 @@
 import { Request, Response } from 'express';
-import * as productionService from '../services/production.service';
-import { sendSuccess, sendError } from '../utils/apiResponse';
+import * as productionService from '../services/production.service.js';
+import { sendSuccess, sendError } from '../utils/apiResponse.js';
 
 export async function listProjects(req: Request, res: Response): Promise<void> {
   const { category, status, monthKey, page, limit } = req.query;

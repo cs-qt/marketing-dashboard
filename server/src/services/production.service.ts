@@ -1,10 +1,10 @@
-import { ProductionProject, IProductionProject, Comment } from '../models';
+import { ProductionProject, IProductionProject, Comment } from '../models/index.js';
 import { PostStatus, STATUS_TRANSITIONS, TRANSITION_ROLES, UserRole, CommentEntity, ProjectCategory } from '@expertmri/shared';
 import { Types } from 'mongoose';
-import * as notificationService from './notification.service';
-import * as s3Service from './s3.service';
-import type { IUser } from '../models/User';
-import type { CreateProductionProjectInput, UpdateProductionProjectInput } from '../validators/production.validator';
+import * as notificationService from './notification.service.js';
+import * as s3Service from './s3.service.js';
+import type { IUser } from '../models/User.js';
+import type { CreateProductionProjectInput, UpdateProductionProjectInput } from '../validators/production.validator.js';
 
 /* ── Helpers ── */
 

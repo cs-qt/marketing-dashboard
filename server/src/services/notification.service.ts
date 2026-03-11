@@ -1,9 +1,9 @@
-import { Notification, User, IUser, Comment } from '../models';
+import { Notification, User, IUser, Comment } from '../models/index.js';
 import { NotificationType, CommentEntity, UserRole } from '@expertmri/shared';
-import { sendEmail } from './email.service';
-import { logger } from '../utils/logger';
+import { sendEmail } from './email.service.js';
+import { logger } from '../utils/logger.js';
 import { Types } from 'mongoose';
-import { env } from '../config/env';
+import { env } from '../config/env.js';
 
 interface NotifyParams {
   recipientId: Types.ObjectId;

@@ -1,6 +1,6 @@
 import { Request, Response, NextFunction } from 'express';
 import { ZodSchema, ZodError } from 'zod';
-import { sendError } from '../utils/apiResponse';
+import { sendError } from '../utils/apiResponse.js';
 
 /**
  * Validates req.body against a Zod schema.

@@ -1,9 +1,9 @@
-import { Month, MonthMedia, MediaVersion, Comment, IMonthMedia, IMediaVersion } from '../models';
+import { Month, MonthMedia, MediaVersion, Comment, IMonthMedia, IMediaVersion } from '../models/index.js';
 import { CommentEntity } from '@expertmri/shared';
 import { Types } from 'mongoose';
-import * as s3Service from './s3.service';
-import type { IUser } from '../models/User';
-import type { CreateMonthInput, UpdateMonthInput, CreateMonthMediaInput, UpdateMonthMediaInput } from '../validators/media.validator';
+import * as s3Service from './s3.service.js';
+import type { IUser } from '../models/User.js';
+import type { CreateMonthInput, UpdateMonthInput, CreateMonthMediaInput, UpdateMonthMediaInput } from '../validators/media.validator.js';
 
 /* ══════════════════════════════════════════════
    MONTHS

@@ -1,6 +1,6 @@
 import { Request, Response } from 'express';
-import * as calendarService from '../services/calendar.service';
-import { sendSuccess, sendError } from '../utils/apiResponse';
+import * as calendarService from '../services/calendar.service.js';
+import { sendSuccess, sendError } from '../utils/apiResponse.js';
 
 export async function listPosts(req: Request, res: Response): Promise<void> {
   const { month, year, platform, status, page, limit } = req.query;

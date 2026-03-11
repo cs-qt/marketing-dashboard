@@ -1,9 +1,9 @@
 import { Router } from 'express';
-import { authenticate } from '../middleware/authenticate';
-import { validate } from '../middleware/validate';
-import { asyncHandler } from '../utils/asyncHandler';
-import { createCommentSchema, updateCommentSchema } from '../validators/comment.validator';
-import * as ctrl from '../controllers/comments.controller';
+import { authenticate } from '../middleware/authenticate.js';
+import { validate } from '../middleware/validate.js';
+import { asyncHandler } from '../utils/asyncHandler.js';
+import { createCommentSchema, updateCommentSchema } from '../validators/comment.validator.js';
+import * as ctrl from '../controllers/comments.controller.js';
 
 const router = Router();
 

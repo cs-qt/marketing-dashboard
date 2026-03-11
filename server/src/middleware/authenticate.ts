@@ -1,7 +1,7 @@
 import { Request, Response, NextFunction } from 'express';
-import { verifyToken } from '../utils/jwt';
-import { User } from '../models';
-import { sendError } from '../utils/apiResponse';
+import { verifyToken } from '../utils/jwt.js';
+import { User } from '../models/index.js';
+import { sendError } from '../utils/apiResponse.js';
 
 /**
  * Verifies JWT from httpOnly cookie and attaches user to req.

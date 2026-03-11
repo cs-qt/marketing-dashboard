@@ -1,8 +1,8 @@
-import { Comment, IComment, CalendarPost, ProductionProject, Month, User } from '../models';
+import { Comment, IComment, CalendarPost, ProductionProject, Month, User } from '../models/index.js';
 import { CommentEntity, UserRole } from '@expertmri/shared';
 import { Types } from 'mongoose';
-import * as notificationService from './notification.service';
-import type { IUser } from '../models/User';
+import * as notificationService from './notification.service.js';
+import type { IUser } from '../models/User.js';
 
 /* ── Helpers ── */
 

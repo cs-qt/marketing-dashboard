@@ -1,9 +1,9 @@
 import { Request, Response } from 'express';
-import { User } from '../models';
+import { User } from '../models/index.js';
 import { UserRole, AuthMethod } from '@expertmri/shared';
-import { sendSuccess, sendError, sendCreated } from '../utils/apiResponse';
-import { generateMagicLink } from '../services/magicLink.service';
-import { logger } from '../utils/logger';
+import { sendSuccess, sendError, sendCreated } from '../utils/apiResponse.js';
+import { generateMagicLink } from '../services/magicLink.service.js';
+import { logger } from '../utils/logger.js';
 
 /**
  * GET /api/users

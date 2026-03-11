@@ -1,9 +1,9 @@
 import passport from 'passport';
 import { Strategy as GoogleStrategy, Profile } from 'passport-google-oauth20';
-import { env } from './env';
-import { User } from '../models/User';
+import { env } from './env.js';
+import { User } from '../models/User.js';
 import { UserRole, AuthMethod } from '@expertmri/shared';
-import { logger } from '../utils/logger';
+import { logger } from '../utils/logger.js';
 
 export function configurePassport(): void {
   passport.use(

@@ -1,12 +1,12 @@
 import { Router } from 'express';
-import authRoutes from './auth.routes';
-import usersRoutes from './users.routes';
-import calendarRoutes from './calendar.routes';
-import productionRoutes from './production.routes';
-import commentsRoutes from './comments.routes';
-import analyticsRoutes from './analytics.routes';
-import monthsRoutes from './months.routes';
-import mediaRoutes from './media.routes';
+import authRoutes from './auth.routes.js';
+import usersRoutes from './users.routes.js';
+import calendarRoutes from './calendar.routes.js';
+import productionRoutes from './production.routes.js';
+import commentsRoutes from './comments.routes.js';
+import analyticsRoutes from './analytics.routes.js';
+import monthsRoutes from './months.routes.js';
+import mediaRoutes from './media.routes.js';
 
 const router = Router();
 

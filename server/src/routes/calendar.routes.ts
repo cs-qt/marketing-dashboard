@@ -1,15 +1,15 @@
 import { Router } from 'express';
-import { authenticate } from '../middleware/authenticate';
-import { authorize } from '../middleware/authorize';
-import { validate } from '../middleware/validate';
-import { asyncHandler } from '../utils/asyncHandler';
+import { authenticate } from '../middleware/authenticate.js';
+import { authorize } from '../middleware/authorize.js';
+import { validate } from '../middleware/validate.js';
+import { asyncHandler } from '../utils/asyncHandler.js';
 import { UserRole } from '@expertmri/shared';
 import {
   createCalendarPostSchema,
   updateCalendarPostSchema,
   statusChangeSchema,
-} from '../validators/calendar.validator';
-import * as ctrl from '../controllers/calendar.controller';
+} from '../validators/calendar.validator.js';
+import * as ctrl from '../controllers/calendar.controller.js';
 
 const router = Router();
 

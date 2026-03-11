@@ -1,6 +1,6 @@
 import { Request, Response } from 'express';
-import * as commentService from '../services/comment.service';
-import { sendSuccess, sendError } from '../utils/apiResponse';
+import * as commentService from '../services/comment.service.js';
+import { sendSuccess, sendError } from '../utils/apiResponse.js';
 import { CommentEntity } from '@expertmri/shared';
 
 const VALID_ENTITY_TYPES = Object.values(CommentEntity);

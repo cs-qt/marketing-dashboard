@@ -1,5 +1,5 @@
 import AWS from 'aws-sdk';
-import { env } from './env';
+import { env } from './env.js';
 
 export const s3 = new AWS.S3({
   accessKeyId: env.aws.accessKeyId,

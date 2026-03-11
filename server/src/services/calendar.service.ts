@@ -1,9 +1,9 @@
-import { CalendarPost, ICalendarPost, Comment } from '../models';
+import { CalendarPost, ICalendarPost, Comment } from '../models/index.js';
 import { PostStatus, STATUS_TRANSITIONS, TRANSITION_ROLES, UserRole, CommentEntity } from '@expertmri/shared';
 import { Types } from 'mongoose';
-import * as notificationService from './notification.service';
-import type { IUser } from '../models/User';
-import type { CreateCalendarPostInput, UpdateCalendarPostInput } from '../validators/calendar.validator';
+import * as notificationService from './notification.service.js';
+import type { IUser } from '../models/User.js';
+import type { CreateCalendarPostInput, UpdateCalendarPostInput } from '../validators/calendar.validator.js';
 
 /* ── Helpers ── */
 

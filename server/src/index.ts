@@ -6,13 +6,13 @@ import morgan from 'morgan';
 import cookieParser from 'cookie-parser';
 import passport from 'passport';
 
-import { env } from './config/env';
-import { connectDB } from './config/db';
-import { configurePassport } from './config/passport';
-import { errorHandler } from './middleware/errorHandler';
-import { apiLimiter } from './middleware/rateLimiter';
-import routes from './routes';
-import { logger } from './utils/logger';
+import { env } from './config/env.js';
+import { connectDB } from './config/db.js';
+import { configurePassport } from './config/passport.js';
+import { errorHandler } from './middleware/errorHandler.js';
+import { apiLimiter } from './middleware/rateLimiter.js';
+import routes from './routes/index.js';
+import { logger } from './utils/logger.js';
 
 async function bootstrap(): Promise<void> {
   // Connect to MongoDB

@@ -1,6 +1,6 @@
 import { Request, Response } from 'express';
-import * as mediaService from '../services/media.service';
-import { sendSuccess, sendError } from '../utils/apiResponse';
+import * as mediaService from '../services/media.service.js';
+import { sendSuccess, sendError } from '../utils/apiResponse.js';
 
 export async function listMedia(req: Request, res: Response): Promise<void> {
   const media = await mediaService.listMedia(req.params.monthId);

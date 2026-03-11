@@ -1,7 +1,7 @@
-import { GoogleAdsData, SeoData, SocialMediaData, ProductionProject } from '../models';
+import { GoogleAdsData, SeoData, SocialMediaData, ProductionProject } from '../models/index.js';
 import { PostStatus, ProjectCategory } from '@expertmri/shared';
 import { Types } from 'mongoose';
-import type { UpsertGoogleAdsInput, UpsertSeoInput, UpsertSocialInput } from '../validators/analytics.validator';
+import type { UpsertGoogleAdsInput, UpsertSeoInput, UpsertSocialInput } from '../validators/analytics.validator.js';
 
 /* ══════════════════════════════════════════════
    GOOGLE ADS

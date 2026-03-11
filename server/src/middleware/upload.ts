@@ -1,7 +1,7 @@
 import multer from 'multer';
 import multerS3 from 'multer-s3';
 import { S3Client } from '@aws-sdk/client-s3';
-import { env } from '../config/env';
+import { env } from '../config/env.js';
 import path from 'path';
 import crypto from 'crypto';
 

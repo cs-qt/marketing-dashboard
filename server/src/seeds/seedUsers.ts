@@ -1,7 +1,7 @@
 import mongoose from 'mongoose';
-import { User } from '../models';
+import { User } from '../models/index.js';
 import { UserRole, AuthMethod } from '@expertmri/shared';
-import { env } from '../config/env';
+import { env } from '../config/env.js';
 
 async function seedUsers() {
   try {

@@ -1,7 +1,7 @@
 import { Request, Response } from 'express';
-import * as analyticsService from '../services/analytics.service';
-import { sendSuccess, sendError } from '../utils/apiResponse';
-import { logger } from '../utils/logger';
+import * as analyticsService from '../services/analytics.service.js';
+import { sendSuccess, sendError } from '../utils/apiResponse.js';
+import { logger } from '../utils/logger.js';
 
 /* ══════════════════════════════════════════════
    GOOGLE ADS

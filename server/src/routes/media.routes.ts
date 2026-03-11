@@ -1,12 +1,12 @@
 import { Router } from 'express';
-import { authenticate } from '../middleware/authenticate';
-import { authorize } from '../middleware/authorize';
-import { validate } from '../middleware/validate';
-import { asyncHandler } from '../utils/asyncHandler';
-import { mediaUpload } from '../middleware/upload';
+import { authenticate } from '../middleware/authenticate.js';
+import { authorize } from '../middleware/authorize.js';
+import { validate } from '../middleware/validate.js';
+import { asyncHandler } from '../utils/asyncHandler.js';
+import { mediaUpload } from '../middleware/upload.js';
 import { UserRole } from '@expertmri/shared';
-import { updateMonthMediaSchema } from '../validators/media.validator';
-import * as ctrl from '../controllers/media.controller';
+import { updateMonthMediaSchema } from '../validators/media.validator.js';
+import * as ctrl from '../controllers/media.controller.js';
 
 const router = Router();
 

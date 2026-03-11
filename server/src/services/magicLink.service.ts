@@ -1,10 +1,10 @@
 import crypto from 'crypto';
-import { MagicLink } from '../models';
-import { User, IUser } from '../models';
-import { env } from '../config/env';
-import { sendEmail } from './email.service';
+import { MagicLink } from '../models/index.js';
+import { User, IUser } from '../models/index.js';
+import { env } from '../config/env.js';
+import { sendEmail } from './email.service.js';
 import { UserRole, AuthMethod } from '@expertmri/shared';
-import { logger } from '../utils/logger';
+import { logger } from '../utils/logger.js';
 
 /**
  * Generates a magic link token, saves to DB, and sends email.

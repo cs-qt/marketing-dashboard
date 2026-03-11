@@ -1,16 +1,16 @@
 import { Router } from 'express';
-import { authenticate } from '../middleware/authenticate';
-import { authorize } from '../middleware/authorize';
-import { validate } from '../middleware/validate';
-import { asyncHandler } from '../utils/asyncHandler';
-import { printReadyUpload } from '../middleware/upload';
+import { authenticate } from '../middleware/authenticate.js';
+import { authorize } from '../middleware/authorize.js';
+import { validate } from '../middleware/validate.js';
+import { asyncHandler } from '../utils/asyncHandler.js';
+import { printReadyUpload } from '../middleware/upload.js';
 import { UserRole } from '@expertmri/shared';
 import {
   createProductionProjectSchema,
   updateProductionProjectSchema,
-} from '../validators/production.validator';
-import { statusChangeSchema } from '../validators/calendar.validator';
-import * as ctrl from '../controllers/production.controller';
+} from '../validators/production.validator.js';
+import { statusChangeSchema } from '../validators/calendar.validator.js';
+import * as ctrl from '../controllers/production.controller.js';
 
 const router = Router();
 

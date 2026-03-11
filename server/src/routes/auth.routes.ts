@@ -6,12 +6,12 @@ import {
   verifyMagicLinkToken,
   getMe,
   logout,
-} from '../controllers/auth.controller';
-import { authenticate } from '../middleware/authenticate';
-import { validate } from '../middleware/validate';
-import { authLimiter, magicLinkLimiter } from '../middleware/rateLimiter';
-import { magicLinkRequestSchema } from '../validators/auth.validator';
-import { asyncHandler } from '../utils/asyncHandler';
+} from '../controllers/auth.controller.js';
+import { authenticate } from '../middleware/authenticate.js';
+import { validate } from '../middleware/validate.js';
+import { authLimiter, magicLinkLimiter } from '../middleware/rateLimiter.js';
+import { magicLinkRequestSchema } from '../validators/auth.validator.js';
+import { asyncHandler } from '../utils/asyncHandler.js';
 
 const router = Router();
 

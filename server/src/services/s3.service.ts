@@ -1,5 +1,5 @@
-import { s3, S3_BUCKET } from '../config/s3';
-import { logger } from '../utils/logger';
+import { s3, S3_BUCKET } from '../config/s3.js';
+import { logger } from '../utils/logger.js';
 
 /**
  * Generate a signed download URL for an S3 key (valid 1 hour).

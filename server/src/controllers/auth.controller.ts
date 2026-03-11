@@ -1,12 +1,12 @@
 import { Request, Response, NextFunction } from 'express';
 import passport from 'passport';
-import { signToken, cookieOptions } from '../utils/jwt';
-import { sendSuccess, sendError } from '../utils/apiResponse';
-import { generateMagicLink, verifyMagicLink } from '../services/magicLink.service';
-import { User } from '../models';
+import { signToken, cookieOptions } from '../utils/jwt.js';
+import { sendSuccess, sendError } from '../utils/apiResponse.js';
+import { generateMagicLink, verifyMagicLink } from '../services/magicLink.service.js';
+import { User } from '../models/index.js';
 import { UserRole, AuthMethod } from '@expertmri/shared';
-import { env } from '../config/env';
-import { logger } from '../utils/logger';
+import { env } from '../config/env.js';
+import { logger } from '../utils/logger.js';
 
 /**
  * GET /api/auth/google
